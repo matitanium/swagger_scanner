@@ -1,6 +1,6 @@
 import requests
 from optparse import OptionParser
-from httpx import get
+from requests import get
 requests.packages.urllib3.disable_warnings()
 from termcolor import colored
 import bs4
