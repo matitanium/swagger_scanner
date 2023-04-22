@@ -62,11 +62,10 @@ def check_file():
                         try:
                             html = bs4.BeautifulSoup(response.text,"html.parser")
                             title=str(html.title)
+                            if "Swagger" in title:
+                            print(colored("[+] Swagger UI detected at " + path,'blue'))
                         except Exception:
                             pass
-                       
-                        if "Swagger" in title:
-                            print(colored("[+] Swagger UI detected at " + path,'blue'))
                             if output:
                                 with open(output,"a") as out:
                                     out.writelines(path)
