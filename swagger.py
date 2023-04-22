@@ -51,6 +51,7 @@ def check_file():
                     print(line)
                 else:
                     pass
+
                 with open('list.txt') as slist:
                     for line1 in slist:
                         line1=line1.strip()
@@ -63,7 +64,7 @@ def check_file():
                             html = bs4.BeautifulSoup(response.text,"html.parser")
                             title=str(html.title)
                             if "Swagger" in title:
-                            print(colored("[+] Swagger UI detected at " + path,'blue'))
+                                print(colored("[+] Swagger UI detected at " + path,'blue'))
                         except Exception:
                             pass
                             if output:
